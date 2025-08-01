@@ -1,0 +1,34 @@
+{
+  "name": "mettle-utils-signals",
+  "version": "0.0.1",
+  "description": "",
+  "private": false,
+  "main": "dist/mettle-utils-signals.js",
+  "module": "dist/mettle-utils-signals.module.js",
+  "unpkg": "dist/mettle-utils-signals.min.js",
+  "types": "dist/mettle-utils-signals.d.ts",
+  "source": "src/index.ts",
+  "scripts": {
+    "tsc":"tsc",
+    "_build": "microbundle --no-sourcemap",
+    "build": "tsc && pnpm _build --cwd"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/mettle-utils-signals.d.ts",
+      "browser": "./dist/mettle-utils-signals.module.js",
+      "import": "./dist/mettle-utils-signals.mjs",
+      "require": "./dist/mettle-utils-signals.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.19.103",
+    "microbundle": "^0.15.1",
+    "typescript": "~5.8.3"
+  }
+}
